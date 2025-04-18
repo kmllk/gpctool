@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>GPC</title>
+	  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="ask_question">
+      <p>{{ question.question_text }}</p>
+    </div>
+    <div id="answers">
+      {% if question.yes_answer == 99999999 and question.no_answer != 99999999 %}
+        <a class="answer_circle" href="/questions/{{ question.question_num }}/yes/result.html"><div class="answer_text">ДА</div></a>
+        <a class="answer_circle" href="/questions/{{ question.no_answer }}"><div class="answer_text">НЕТ</div></a>
+      {% elif question.yes_answer != 99999999 and question.yes_answer != 99999998 and question.no_answer == 99999999 %}
+        <a class="answer_circle" href="/questions/{{ question.yes_answer }}"><div class="answer_text">ДА</div></a>
+        <a class="answer_circle" href="/questions/{{ question.question_num }}/no/result.html"><div class="answer_text">НЕТ</div></a>
+      {% elif question.yes_answer == 99999999 and question.no_answer == 99999999 %}
+        <a class="answer_circle" href="/questions/{{ question.question_num }}/yes/result.html"><div class="answer_text">ДА</div></a>
+        <a class="answer_circle" href="/questions/{{ question.question_num }}/no/result.html"><div class="answer_text">НЕТ</div></a>
+      {% elif question.yes_answer == 99999998 and question.no_answer != 99999999 %}
+        <a class="answer_circle" href="/questions/promo.html"><div class="answer_text">ДА</div></a>
+        <a class="answer_circle" href="/questions/{{ question.no_answer }}"><div class="answer_text">НЕТ</div></a>
+      {% else %}
+        <a class="answer_circle" href="/questions/{{ question.yes_answer }}"><div class="answer_text">ДА</div></a>
+        <a class="answer_circle" href="/questions/{{ question.no_answer }}"><div class="answer_text">НЕТ</div></a>
+      {% endif %}
+    </div>
+    <div id="begin_again">
+      <a class="rectangle" href="/questions/index.html">НАЧАТЬ СНАЧАЛА</a>
+    </div>
+  </body>
+</html>

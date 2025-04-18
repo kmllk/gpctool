@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>GPC</title>
+	  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id=result_title>Ваша продукция относится к блоку:</div>
+    <div id="brick">
+        {{ answer.0 }}<br>{{ answer.1 }}
+    </div>
+    <div id="result_begin_again">
+      <a class="result_circle" href="/questions/index.html"><p class="result_begin_again_text">НАЧАТЬ СНАЧАЛА</p></a>
+    </div>
+  </body>
+</html>

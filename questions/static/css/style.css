@@ -1,0 +1,149 @@
+  body {
+    color: #000000;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+  }
+
+  #ask_question {
+    font-size: 46px;
+    width: 70%;
+    margin: auto;
+    padding: 0;
+  }
+
+  #answers {
+    font-size: 150px;
+    text-align: center;
+    position: fixed;
+    top: 260px;
+  }
+
+  .answer_circle {
+    height: 330px;
+    width: 330px;
+    position: relative;
+    margin: 0px 120px 0px 155px;
+    text-align: center;
+    float: left;
+    border-radius: 165px;
+    -moz-border-radius:165px;
+    -webkit-border-radius:165px;
+    -khtml-border-radius:165px;
+    border: 5px solid #000000;
+  }
+
+  .answer_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+    }
+
+  #answers a:hover {
+    background-color: #00FF00;
+    border: 5px solid #00FF00;
+    color: white;
+    }
+
+  #begin_again {
+    text-align: center;
+    font-size: 22px;
+    position: fixed;
+    top: 638px;
+    width: 100%;
+  }
+
+  .rectangle {
+    height: 74px;
+    width: 246px;
+    position: relative;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+  }
+
+  #begin_again a:hover {
+    background-color: #FF0000;
+    color: white;
+  }
+
+  #barcode_parent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
+
+  #barcode {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 458px;
+    width: 1024px;
+    background-color: white;
+    text-align: center;
+    font-size: 75px;
+  }
+
+  #barcode p {
+    display: block;
+  }
+
+  #result_title {
+    font-size: 41px;
+    padding: 0;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  #brick {
+    font-size: 46px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  #result_begin_again {
+    font-size: 22px;
+    text-align: center;
+    position: fixed;
+    top: 460px;
+    width: 100%;
+  }
+
+  .result_circle {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    float: left;
+    left: 41%;
+    text-align: center;
+    border-radius: 100px;
+    -moz-border-radius:100px;
+    -webkit-border-radius:100px;
+    -khtml-border-radius:100px;
+    border: 2px solid #000000;
+  }
+
+  .result_begin_again_text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #result_begin_again a:hover {
+    background-color: #FF0000;
+    border: 2px solid #FF0000;
+    color: white;
+  }

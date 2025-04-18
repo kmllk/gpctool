@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>GPC</title>
+	  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id=result_title>Внимание - Товары, прилагаемые к основному товару бесплатно, должны быть исключены из процесса классификации. Выберите основной товар в вашем наборе и начните сначала.</div>
+    <div id="result_begin_again">
+      <a class="result_circle" href="/questions/index.html"><p class="result_begin_again_text">НАЧАТЬ СНАЧАЛА</p></a>
+    </div>
+  </body>
+</html>
